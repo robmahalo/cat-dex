@@ -1,2 +1,2 @@
 # plant-dex
-Plant dictionary
+Plant Dictionary
