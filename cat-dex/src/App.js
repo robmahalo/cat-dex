@@ -6,22 +6,21 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      plants: []
+      cats: []
     };
   }
 
   componentDidMount() {
     fetch('https://jsonplaceholder.typicode.com/users')
       .then(response => response.json())
-      .then(users => this.setState({ plants: users }))
+      .then(users => this.setState({ cats: users }))
   }
 
 
   render() {
     return (
       <div className="App">
-        <CardList plants={this.state.plants}>
-      </CardList>
+        <CardList cats={this.state.cats}/>
       </div>
     );
   }
