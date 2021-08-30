@@ -1,2 +1,2 @@
-# plant-dex
-Plant Dictionary
+# cat-dex
+Cat Dictionary
