@@ -9,7 +9,8 @@ class App extends Component {
 
     this.state = {
       plants: [],
-      searchField: ''
+      searchField: '',
+      title: ''
     };
 
   }
@@ -21,23 +22,23 @@ class App extends Component {
   }
 
   handleChange = (e) => {
-    this.setState({ searchField: e.target.value });
+    this.setState({ searchField: e.target.value, title: e.target.value});
   }
 
 
   render() {
-    const { plants, searchField } = this.state;
-    const filteredPlants = plants.filter(plant => plant.name.toLowerCase().includes(searchField?.toLowerCase())
-    );
+    const { plants, searchField, title } = this.state;
+    // const filteredPlants = plants.filter(plant => plant.name.toLowerCase().includes(searchField?.toLowerCase())
+    // );
 
     return (
       <div className="App">
-        <h1>Plant Dictionary</h1>
+        <h1>{title}</h1>
         <SearchBox
           placeholder='search plants'
           handleChange={this.handleChange}
         />
-        <CardList plants={filteredPlants}/>
+        <CardList plants={plants}/>
       </div>
     );
   }
